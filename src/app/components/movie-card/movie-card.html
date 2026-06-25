@@ -1,0 +1,21 @@
+<article class="movie-card" [routerLink]="['/movie', movie().id]">
+  <div class="poster-container">
+    @if (movie().poster_path) {
+      <img 
+        [src]="imageBaseUrl + movie().poster_path" 
+        [alt]="movie().title"
+        class="movie-poster"
+        loading="lazy"
+      >
+    } @else {
+      <div class="no-poster">
+        <span class="placeholder-text">No Image</span>
+      </div>
+    }
+    <div class="rating-badge">{{ movie().vote_average.toFixed(1) }}</div>
+  </div>
+  <div class="movie-info">
+    <h3 class="movie-title">{{ movie().title }}</h3>
+    <p class="movie-year">{{ movie().release_date ? movie().release_date.slice(0, 4) : 'N/A' }}</p>
+  </div>
+</article>
