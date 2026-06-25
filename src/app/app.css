@@ -1,0 +1,50 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #0d0d0d;
+  color: #fff;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(13, 13, 13, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo {
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #fff 0%, #aaa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app-main {
+  min-height: calc(100vh - 65px);
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+  }
+}
